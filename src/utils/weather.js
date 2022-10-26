@@ -12,7 +12,7 @@ weather = (latitude, logitude, callback) => {
             console.error(bodyError.info);
             callback(bodyError.info, undefined)
         }else{
-            callback(undefined, `${current.weather_descriptions[0]}. It's currently ${current.temperature} degress out. Is feels like ${current.feelslike} degress out.`);
+            callback(undefined, `${current.weather_descriptions[0]}. It's currently ${current.temperature} degress out. Is feels like ${current.feelslike} degress out. The humidity is ${current.humidity}%.`);
         }
     });
 };
